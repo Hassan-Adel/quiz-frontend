@@ -9,4 +9,8 @@ export class QuestionComponent implements OnInit {
     constructor() { }
 
     ngOnInit(): void { }
+
+    post(question){
+        console.log(question);
+    }
 }
