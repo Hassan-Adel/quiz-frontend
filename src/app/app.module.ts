@@ -3,8 +3,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {MatButtonModule, MatInputModule, MatCardModule} from '@angular/material';
-
 import { FormsModule } from '@angular/forms';
+
+import { QuestionService } from './question/question.service'
 import { AppComponent } from './app.component';
 import {QuestionComponent} from './question/question.component';
 
@@ -22,7 +23,7 @@ import {QuestionComponent} from './question/question.component';
     MatInputModule,
     MatCardModule
   ],
-  providers: [],
+  providers: [QuestionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
