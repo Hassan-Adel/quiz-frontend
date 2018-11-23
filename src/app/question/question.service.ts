@@ -10,4 +10,9 @@ export class QuestionService {
             console.log(res);
         });
     }
+
+    getQuestions(){
+        return this.http.get('https://localhost:44360/api/questions');
+    }
+
 }
