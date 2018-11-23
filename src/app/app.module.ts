@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatInputModule, MatCardModule, MatListModule } from '@angular/material';
+import { AppMaterialModule } from './app-material.module';
 import { FormsModule } from '@angular/forms';
 
 import { QuestionService } from './question/question.service'
@@ -25,10 +25,7 @@ import { QuestionsComponent } from './question/questions.component';
     AppRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatInputModule,
-    MatCardModule,
-    MatListModule
+    AppMaterialModule
   ],
   providers: [QuestionService],
   bootstrap: [AppComponent]
