@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { QuestionService } from './question.service';
 
 @Component({
     selector: 'question',
@@ -6,11 +7,14 @@ import { Component, OnInit } from '@angular/core';
     //styleUrls: ['./question.component.scss']
 })
 export class QuestionComponent implements OnInit {
-    constructor() { }
+
+    question = {};
+
+    constructor(private api : QuestionService) { }
 
     ngOnInit(): void { }
 
     post(question){
-        console.log(question);
+        this.api.postQuestion(question);
     }
 }
