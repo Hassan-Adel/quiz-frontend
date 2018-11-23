@@ -5,13 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module';
 import { FormsModule } from '@angular/forms';
-
+//Services
 import { QuestionService } from './question/question.service'
+import { QuizService } from './quiz/quiz.service'
+//Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NavComponent } from './nav/nav.component';
 import { QuestionComponent } from './question/question.component';
 import { QuestionsComponent } from './question/questions.component';
+import { QuizComponent } from './quiz/quiz.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,8 @@ import { QuestionsComponent } from './question/questions.component';
     HomeComponent,
     NavComponent,
     QuestionComponent,
-    QuestionsComponent
+    QuestionsComponent,
+    QuizComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +33,7 @@ import { QuestionsComponent } from './question/questions.component';
     BrowserAnimationsModule,
     AppMaterialModule
   ],
-  providers: [QuestionService],
+  providers: [QuestionService, QuizService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
