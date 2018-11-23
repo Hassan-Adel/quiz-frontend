@@ -8,12 +8,14 @@ import { FormsModule } from '@angular/forms';
 
 import { QuestionService } from './question/question.service'
 import { AppComponent } from './app.component';
+import { HomeComponent } from './home/home.component';
 import { QuestionComponent } from './question/question.component';
 import { QuestionsComponent } from './question/questions.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
     QuestionComponent,
     QuestionsComponent
   ],
