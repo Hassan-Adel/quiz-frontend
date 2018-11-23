@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { QuestionService } from './question/question.service'
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
+import { NavComponent } from './nav/nav.component';
 import { QuestionComponent } from './question/question.component';
 import { QuestionsComponent } from './question/questions.component';
 
@@ -16,6 +17,7 @@ import { QuestionsComponent } from './question/questions.component';
   declarations: [
     AppComponent,
     HomeComponent,
+    NavComponent,
     QuestionComponent,
     QuestionsComponent
   ],
