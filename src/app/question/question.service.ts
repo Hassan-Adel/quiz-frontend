@@ -18,6 +18,10 @@ export class QuestionService {
         return this.http.get('https://localhost:44360/api/questions');
     }
 
+    getQuizQuestions(quizId){
+        return this.http.get(`https://localhost:44360/api/questions/${quizId}`);
+    }
+
     postQuestion(question){
         this.http.post('https://localhost:44360/api/questions', question).subscribe(res => {
             console.log(res);
