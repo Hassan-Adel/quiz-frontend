@@ -6,13 +6,15 @@ import { QuestionComponent } from './question/question.component';
 import { QuestionsComponent } from './question/questions.component';
 import { QuizComponent } from './quiz/quiz.component';
 import { QuizesComponent } from './quiz/quizes.component';
+import { RegisterComponent } from './account/register.component';
 
 
 const routes: Routes = [
          { path: 'home', component: HomeComponent },
          { path: 'question', component: QuestionComponent },
          { path: 'question/:quizId', component: QuestionComponent },
-         { path: 'questions', component: QuestionsComponent },
+         //{ path: 'questions', component: QuestionsComponent },
+         { path: 'register', component: RegisterComponent },
          { path: 'quiz', component: QuizComponent },
          { path: 'quizes', component: QuizesComponent },
          { path: '', redirectTo: 'home', pathMatch: 'full' },//anytime user navigates to root take them to books, use pathMach whenever using redirecting
