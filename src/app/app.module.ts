@@ -15,6 +15,7 @@ import { NavComponent } from './nav/nav.component';
 import { QuestionComponent } from './question/question.component';
 import { QuestionsComponent } from './question/questions.component';
 import { QuizComponent } from './quiz/quiz.component';
+import { QuizesComponent } from './quiz/quizes.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { QuizComponent } from './quiz/quiz.component';
     NavComponent,
     QuestionComponent,
     QuestionsComponent,
-    QuizComponent
+    QuizComponent,
+    QuizesComponent
   ],
   imports: [
     BrowserModule,
