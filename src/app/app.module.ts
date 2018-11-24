@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //Services
+import { CustomValidatorService } from './custom-validators';
 import { QuestionService } from './question/question.service'
 import { QuizService } from './quiz/quiz.service'
 import { AccountService } from './account/account.service'
@@ -39,7 +40,7 @@ import { RegisterComponent } from './account/register.component';
     BrowserAnimationsModule,
     AppMaterialModule
   ],
-  providers: [QuestionService, QuizService, AccountService],
+  providers: [CustomValidatorService, QuestionService, QuizService, AccountService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
