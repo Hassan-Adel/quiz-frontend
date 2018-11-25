@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppMaterialModule } from './app-material.module';
@@ -10,6 +10,7 @@ import { CustomValidatorService } from './custom-validators';
 import { QuestionService } from './question/question.service'
 import { QuizService } from './quiz/quiz.service'
 import { AuthenticationService } from './account/authentication.service'
+import { AuthInterceptor } from './auth-interceptor'
 //Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -40,7 +41,12 @@ import { RegisterComponent } from './account/register.component';
     BrowserAnimationsModule,
     AppMaterialModule
   ],
-  providers: [CustomValidatorService, QuestionService, QuizService, AuthenticationService],
+  providers: [CustomValidatorService, QuestionService, QuizService, AuthenticationService, 
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: AuthInterceptor,
+      multi: true
+    }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
