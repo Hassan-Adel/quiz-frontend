@@ -9,7 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CustomValidatorService } from './custom-validators';
 import { QuestionService } from './question/question.service'
 import { QuizService } from './quiz/quiz.service'
-import { AccountService } from './account/account.service'
+import { AuthenticationService } from './account/authentication.service'
 //Components
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -40,7 +40,7 @@ import { RegisterComponent } from './account/register.component';
     BrowserAnimationsModule,
     AppMaterialModule
   ],
-  providers: [CustomValidatorService, QuestionService, QuizService, AccountService],
+  providers: [CustomValidatorService, QuestionService, QuizService, AuthenticationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

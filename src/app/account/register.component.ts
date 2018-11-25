@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { AccountService } from './account.service';
+import { AuthenticationService } from './authentication.service'
 import { CustomValidatorService } from '../custom-validators';
 
 @Component({
@@ -8,7 +8,7 @@ import { CustomValidatorService } from '../custom-validators';
 })
 export class RegisterComponent {
   form : any;
-  constructor(private api : AccountService, private FB : FormBuilder, customValidaors : CustomValidatorService) {
+  constructor(private authApi : AuthenticationService, private FB : FormBuilder, customValidaors : CustomValidatorService) {
       this.form = FB.group({
         email:['', [Validators.required, customValidaors.emailValid()]],
         password:['', Validators.required],
@@ -19,7 +19,7 @@ export class RegisterComponent {
       );
    }
 
-   register(form){
-    
+   register(){
+      this.authApi.register(this.form.value);
     }
 }
