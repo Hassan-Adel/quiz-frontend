@@ -21,6 +21,7 @@ import { QuizComponent } from './quiz/quiz.component';
 import { QuizesComponent } from './quiz/quizes.component';
 import { RegisterComponent } from './account/register.component';
 import { LoginComponent } from './account/login.component';
+import { PlayComponent } from './play/play.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { LoginComponent } from './account/login.component';
     QuestionsComponent,
     QuizComponent,
     QuizesComponent,
+    PlayComponent,
     RegisterComponent,
     LoginComponent
   ],
